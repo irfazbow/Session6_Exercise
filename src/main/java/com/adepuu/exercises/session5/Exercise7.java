@@ -28,13 +28,14 @@ public class Exercise7 {
         Arrays.sort(sArray);
         Arrays.sort(tArray);
 
-        if (Arrays.equals(sArray, tArray)) {
-            System.out.println(true);
-        } else {
+        for (int i = 0; i < s.length(); i++) {
+            if (sArray[i] != tArray[i]) {
             System.out.println(false);
+            return;
+            }
         }
+        System.out.println(true);
     }
-
     public static void main(String[] args) {
         String s = "Listen";
         String t = "Silent";
